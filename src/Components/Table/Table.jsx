@@ -7,7 +7,7 @@ import TableCell from './TableCell';
 export default function Table() {
   return (
     <>
-    <div className='overflow-x-auto'>
+    <div className='overflow-x-auto '>
     <table className='w-full table-auto'>
       <thead>
         <tr className='text-gray-400'>
