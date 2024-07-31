@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { searchTerm } from '../../Context/SearchTerm'
 
 export default function MainNav() {
 
     const [openToggle, setOpenToggle] = useState(false)
+    let { setGetTerm } = useContext(searchTerm)
+    
+    function searchKey(e) {
+        // console.log(e.target.value);
+        setGetTerm(e.target.value)
+    }
+
 
     return (
         <div>
             <nav className='fixed top-0 left-0 right-0 p-2 bg-white border border-slate-300 border-opacity-55 border-t-0 z-40 flex items-center justify-evenly'>
                 <div className='relative'>
-                    <input className=' md:w-96 h-8 p-5 px-7 border-2 border-slate-300 rounded-2xl bg-slate-50' type="text" placeholder='Search...' />
+                    <input onChange={searchKey} className=' md:w-96 h-8 p-5 px-7 border-2 border-slate-300 rounded-2xl bg-slate-50' type="text" placeholder='Search...' />
                     <i className="fa-solid text-slate-400 fa-magnifying-glass absolute left-2 top-1/2 -translate-y-1/2"></i>
                 </div>
                 <div className={`${openToggle ? 'flex' : 'hidden'} rounded-xl lg:flex lg:static lg:border-none lg:shadow-none lg:w-auto lg:top-auto shadow-xl border-t-2 absolute top-full left-[70%] lg:p-0 bg-white z-10 flex justify-end`}>

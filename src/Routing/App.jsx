@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "../Layout/Layout"
 import Home from "../Pages/Home/Home"
+import { SearchTermProvider } from "../Context/SearchTerm"
 
 
 export default function App() {
@@ -15,7 +16,9 @@ export default function App() {
 
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <SearchTermProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </SearchTermProvider>
     </>
   )
 }
