@@ -8,3 +8,17 @@
   font-weight: 400;
 }
 
+table{
+  border-collapse: collapse;
+}
+.w-86{
+  width: 86%;
+}
+
+.img-w-50{
+  width: 50px;
+}
+
+.px-3rem{
+  padding-right: 3rem;
+}
