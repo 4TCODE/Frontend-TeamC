@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import TableHeader from './TableHeader';
 import gamePad from '../../assets/game-pad.svg';
 import progressDownload from '../../assets/progress-download.svg';
@@ -7,8 +7,18 @@ import { searchTerm } from '../../Context/SearchTerm';
 
 export default function Table() {
 
-  let { getTerm } = useContext(searchTerm)
-  console.log(getTerm);
+  // const [test, setTest] = useState([
+  //   { name: 'abdo', id: 1 },
+  //   { name: 'mariam', id: 2 },
+  //   { name: 'mohamed', id: 3 },
+  // ])
+
+  // let { getTerm } = useContext(searchTerm)
+  // console.log(getTerm);
+  // let x = test.filter((term) => term.name.includes(getTerm))
+  // console.log(x);
+
+
   return (
     <>
       <div className='overflow-x-auto ml-16 mt-16'>

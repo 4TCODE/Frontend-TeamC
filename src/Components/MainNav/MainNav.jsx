@@ -5,7 +5,7 @@ export default function MainNav() {
 
     const [openToggle, setOpenToggle] = useState(false)
     let { setGetTerm } = useContext(searchTerm)
-    
+
     function searchKey(e) {
         // console.log(e.target.value);
         setGetTerm(e.target.value)
@@ -21,17 +21,22 @@ export default function MainNav() {
                 </div>
                 <div className={`${openToggle ? 'flex' : 'hidden'} rounded-xl lg:flex lg:static lg:border-none lg:shadow-none lg:w-auto lg:top-auto shadow-xl border-t-2 absolute top-full left-[70%] lg:p-0 bg-white z-10 flex justify-end`}>
                     <ul className={`flex flex-col lg:flex-row lg:gap-x-10 text-slate-500`}>
-                        <li className='border-b-2 lg:border-none lg:p-0 p-7 px-10 hover:bg-yellow-200 lg:hover:bg-transparent duration-300'><i className="fa-solid fa-inbox mr-2 text-lg"></i> inbox</li>
-                        <li className='border-b-2 lg:border-none lg:p-0 p-7 px-10 hover:bg-yellow-200 lg:hover:bg-transparent duration-300'><i className="fa-solid fa-comments mr-2 text-lg"></i> Chat</li>
-                        <li className='p-7 px-10 lg:p-0 hover:bg-yellow-200 lg:hover:bg-transparent duration-300'><i className="fa-solid fa-gear fa-spin mr-2 text-lg"></i> Setting</li>
+                        <li className='border-b-2 lg:border-none lg:p-0 p-7 px-10 hover:scale-105 hover:text-emerald-500 hover:bg-yellow-200 lg:hover:bg-transparent rounded-lg duration-300 cursor-pointer'><i className="fa-solid fa-inbox mr-2 text-lg"></i> inbox</li>
+                        <li className='border-b-2 lg:border-none lg:p-0 p-7 px-10 hover:scale-105 hover:text-emerald-500 hover:bg-yellow-200 lg:hover:bg-transparent duration-300 cursor-pointer'><i className="fa-solid fa-comments mr-2 text-lg"></i> Chat</li>
+                        <li className='p-7 px-10 lg:p-0 hover:scale-105 hover:text-emerald-500 hover:bg-yellow-200 lg:hover:bg-transparent duration-300 cursor-pointer'><i className="fa-solid fa-gear fa-spin mr-2 text-lg"></i> Setting</li>
                     </ul>
                 </div>
                 <ul>
-                    <li><i className="fa-regular fa-bell"></i></li>
+                    <li className='cursor-pointer'><i className="fa-regular fa-bell text-lg"></i></li>
                 </ul>
-                <button onClick={() => setOpenToggle(!openToggle)} className='lg:hidden cursor-pointer'>
-                    <i className="fa-solid fa-sliders text-2xl"></i>
+                <button onClick={() => setOpenToggle(!openToggle)} className='cursor-pointer flex items-center gap-3'>
+                    <img className="w-8 h-8 rounded-full" src="https://dashhub-tail.netlify.app/assets/images/user.png" alt="" />
+                    <div className='hidden lg:block'>
+                        <h3 className='font-semibold'>Team-C <i class="fa-solid fa-chevron-down"></i></h3>
+                        <p className='text-sm font-mono'>Trainning</p>
+                    </div>
                 </button>
+
             </nav >
         </div >
     )
