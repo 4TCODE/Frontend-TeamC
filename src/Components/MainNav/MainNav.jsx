@@ -15,8 +15,8 @@ export default function MainNav() {
     return (
         <div>
             <nav className='fixed top-0 left-0 right-0 p-2 bg-white border border-slate-300 border-opacity-55 border-t-0 z-40 flex items-center justify-evenly'>
-                <div className='relative'>
-                    <input onChange={searchKey} className=' md:w-96 h-8 p-5 px-7 border-2 border-slate-300 rounded-2xl bg-slate-50' type="text" placeholder='Search...' />
+                <div className='relative hover:scale-105 duration-300'>
+                    <input onChange={searchKey} className='md:w-96 h-8 p-5 px-7 border-2 border-slate-300 rounded-2xl bg-slate-50' type="text" placeholder='Search...' />
                     <i className="fa-solid text-slate-400 fa-magnifying-glass absolute left-2 top-1/2 -translate-y-1/2"></i>
                 </div>
                 <div className={`${openToggle ? 'flex' : 'hidden'} rounded-xl lg:flex lg:static lg:border-none lg:shadow-none lg:w-auto lg:top-auto shadow-xl border-t-2 absolute top-full left-[70%] lg:p-0 bg-white z-10 flex justify-end`}>
@@ -31,7 +31,7 @@ export default function MainNav() {
                 </ul>
                 <button onClick={() => setOpenToggle(!openToggle)} className='cursor-pointer flex items-center gap-3'>
                     <img className="w-8 h-8 rounded-full hover:scale-110 duration-300" src="https://dashhub-tail.netlify.app/assets/images/user.png" alt="" />
-                    <div className='hidden lg:block'>
+                    <div className='hidden lg:block hover:scale-105 duration-300'>
                         <h3 className='font-semibold'>Team-C <i class="fa-solid fa-chevron-down"></i></h3>
                         <p className='text-sm font-mono'>Trainning</p>
                     </div>

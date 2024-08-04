@@ -11,7 +11,7 @@ export default function Table() {
     <table className='w-86 mx-auto mt-14'>
       <thead>
         <tr className='text-gray-400'>
-          <th className='pr-4 py-2'><input type='checkbox' className='form-checkbox'></input></th>
+          <th className='pr-4 py-5'><input type='checkbox' className='form-checkbox'></input></th>
           <TableHeader children="Websites"></TableHeader>
           <TableHeader children="Assets Name"></TableHeader>
           <TableHeader children="Status"></TableHeader>
@@ -23,7 +23,7 @@ export default function Table() {
       </thead>
       <tbody>
         <tr>
-          <td className=' py-2'>
+          <td className='py-2'>
             <input type='checkbox'></input>
             </td>
           <td className=' py-2'>
