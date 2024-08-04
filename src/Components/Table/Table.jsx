@@ -49,7 +49,7 @@ export default function Table() {
           <td className='py-2'><input type='checkbox'></input></td>
           <td className='py-2'>Amazon</td>
           <TableCell children="Abstract Minimalist"></TableCell>
-          <td className='py-0 px-4 py-2 rounded-md bg-blue-500 text-white text-center'>Public</td>
+          <td className='px-4 py-2 rounded-md bg-blue-500 text-white text-center'>Public</td>
           <td className='py-2'>
           <div className='flex items-center'>
               <img src={gamePad} alt="3d-element" className='max-w-full' />

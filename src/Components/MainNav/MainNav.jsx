@@ -27,10 +27,10 @@ export default function MainNav() {
                     </ul>
                 </div>
                 <ul>
-                    <li className='cursor-pointer'><i className="fa-regular fa-bell text-lg"></i></li>
+                    <li className='cursor-pointer hover:scale-110 hover:rotate-[360deg] duration-1000'><i className="fa-regular fa-bell text-lg"></i></li>
                 </ul>
                 <button onClick={() => setOpenToggle(!openToggle)} className='cursor-pointer flex items-center gap-3'>
-                    <img className="w-8 h-8 rounded-full" src="https://dashhub-tail.netlify.app/assets/images/user.png" alt="" />
+                    <img className="w-8 h-8 rounded-full hover:scale-110 duration-300" src="https://dashhub-tail.netlify.app/assets/images/user.png" alt="" />
                     <div className='hidden lg:block'>
                         <h3 className='font-semibold'>Team-C <i class="fa-solid fa-chevron-down"></i></h3>
                         <p className='text-sm font-mono'>Trainning</p>
